@@ -1,0 +1,1 @@
+- Make a thought bubble appear over my head whenever the user attempts to perform specific actions. Example: if the user tries to scroll, a thought bubble appears with the text: `Scrolling is bad and often times laggy - no user wants to scroll unless they are reading. Every control (not content) on a webpage should be immediately discoverable without scrolling.`
