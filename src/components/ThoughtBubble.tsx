@@ -1,10 +1,26 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const ThoughtBubble = () => {
-  const [isVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
+  const [text, setText] = useState("Welcome to my webpage!");
+
+  useEffect(() => {
+    const setScrollText = () => {
+      setIsVisible(true);
+      setText("Scrolling...");
+    };
+
+    window.addEventListener("wheel", setScrollText);
+    window.addEventListener("touchmove", setScrollText);
+
+    return () => {
+      window.removeEventListener("wheel", setScrollText);
+      window.removeEventListener("touchmove", setScrollText);
+    };
+  }, []);
 
   return (
     <AnimatePresence>
@@ -36,7 +52,7 @@ export const ThoughtBubble = () => {
               />
             </svg>
 
-            <p className="text-gray-800 font-medium text-sm">some text</p>
+            <p className="text-gray-800 font-medium text-sm">{text}</p>
           </div>
         </motion.div>
       )}
