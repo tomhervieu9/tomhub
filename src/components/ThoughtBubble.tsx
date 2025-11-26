@@ -1,18 +1,11 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
-interface ThoughtBubbleProps {
-  text: string;
-  isVisible: boolean;
-  delay?: number;
-}
+export const ThoughtBubble = () => {
+  const [isVisible] = useState(true);
 
-export const ThoughtBubble = ({
-  text,
-  isVisible,
-  delay = 0,
-}: ThoughtBubbleProps) => {
   return (
     <AnimatePresence>
       {isVisible && (
@@ -22,7 +15,6 @@ export const ThoughtBubble = ({
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
           transition={{
             duration: 0.4,
-            delay,
             ease: "easeOut",
           }}
           className="relative inline-block"
@@ -44,7 +36,7 @@ export const ThoughtBubble = ({
               />
             </svg>
 
-            <p className="text-gray-800 font-medium text-sm">{text}</p>
+            <p className="text-gray-800 font-medium text-sm">some text</p>
           </div>
         </motion.div>
       )}
