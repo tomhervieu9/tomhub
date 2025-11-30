@@ -1,9 +1,10 @@
+import { cn } from "@/lib/utils/css/classNames";
 import Image from "next/image";
 import { ThoughtBubble } from "./ThoughtBubble";
 
-export const Host = () => {
+export const Host = (props: { className: string }) => {
   return (
-    <div className="flex-2">
+    <div className={cn("flex-2", props.className)}>
       <div className="flex md:flex-col flex-row w-full h-full">
         <div className="relative flex-1">
           <ThoughtBubble />
