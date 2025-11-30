@@ -4,12 +4,10 @@ import { Sidebar } from "@/components/sidebar/Sidebar";
 
 export default function Home() {
   return (
-    <div className="relative flex h-screen justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex flex-col md:flex-row h-screen w-screen bg-zinc-50 font-sans dark:bg-black">
       <Sidebar />
       <Portfolio />
-      <div className="absolute bottom-0 right-0 flex items-start justify-end w-[30vw]">
-        <Host />
-      </div>
+      <Host />
     </div>
   );
 }

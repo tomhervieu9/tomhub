@@ -3,17 +3,21 @@ import { ThoughtBubble } from "./ThoughtBubble";
 
 export const Host = () => {
   return (
-    <div className="relative w-full h-full">
-      <div className="absolute -top-20 left-0 z-10">
-        <ThoughtBubble />
+    <div className="flex-2">
+      <div className="flex md:flex-col flex-row w-full h-full">
+        <div className="relative flex-1">
+          <ThoughtBubble />
+        </div>
+        <div className="relative flex-1">
+          <Image
+            src="/images/portfolio-shot.png"
+            alt="Profile Picture"
+            priority
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
-      <Image
-        src="/images/portfolio-shot.png"
-        alt="Profile Picture"
-        width={500}
-        height={350}
-        priority
-      />
     </div>
   );
 };
