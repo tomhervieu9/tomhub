@@ -4,7 +4,7 @@ import { ThoughtBubble } from "./ThoughtBubble";
 
 export const Host = (props: { className: string }) => {
   return (
-    <div className={cn("flex-2", props.className)}>
+    <div className={cn("flex-2 min-w-0 min-h-0", props.className)}>
       <div className="flex md:flex-col flex-row w-full h-full">
         <div className="relative flex-1">
           <ThoughtBubble />

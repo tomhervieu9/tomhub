@@ -35,7 +35,7 @@ export const ThoughtBubble = () => {
             duration: 0.4,
             ease: "easeOut",
           }}
-          className="relative inline-block"
+          className="relative"
         >
           {/* Main bubble */}
           <div className="bg-white border-2 border-gray-800 rounded-3xl px-6 py-4 shadow-lg">
@@ -54,7 +54,9 @@ export const ThoughtBubble = () => {
               />
             </svg>
 
-            <p className="text-gray-800 font-medium text-sm">{text}</p>
+            <p className="break-all text-wrap text-gray-800 font-medium text-sm">
+              {text}
+            </p>
           </div>
         </motion.div>
       )}
