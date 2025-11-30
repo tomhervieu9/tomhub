@@ -10,7 +10,9 @@ export const ThoughtBubble = () => {
   useEffect(() => {
     const setScrollText = () => {
       setIsVisible(true);
-      setText("Scrolling...");
+      setText(
+        "Scrolling...ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss  .  "
+      );
     };
 
     window.addEventListener("wheel", setScrollText);
