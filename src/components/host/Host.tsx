@@ -9,14 +9,18 @@ export const Host = (props: { className: string }) => {
         <div className="relative flex-1">
           <ThoughtBubble />
         </div>
-        <div className="relative flex-1">
-          <Image
-            src="/images/portfolio-shot.png"
-            alt="Profile Picture"
-            priority
-            fill
-            className="object-contain"
-          />
+        <div className="flex-1 flex items-end justify-center">
+          <div id="image-container" className="relative w-fit h-fit">
+            <Image
+              src="/images/portfolio-shot.png"
+              alt="Profile Picture"
+              priority
+              width={0}
+              height={0}
+              sizes="100%"
+              className="w-fit h-fit"
+            />
+          </div>
         </div>
       </div>
     </div>
