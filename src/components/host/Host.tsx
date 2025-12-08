@@ -18,7 +18,9 @@ export const Host = (props: { className: string }) => {
           id="thought-bubble-container"
           className="relative flex-10 flex items-end justify-center"
         >
-          <ThoughtBubble />
+          <div id="thought-bubble-inner-container" className=" max-h-full">
+            <ThoughtBubble />
+          </div>
         </div>
         <div id="host-gap" className="flex-1" />
         <div
